@@ -1,5 +1,5 @@
 library(tidyverse)
-r <- read.csv("y.csv")  %>% filter(dist > 4500 & dist < 7000)
+r <- read.csv("y.csv") # %>% filter(dist > 11500 & dist < 12500)
 p <- ggplot(r,aes(x=dist,y=value,color=type)) +
      geom_smooth(method='loess') +
      scale_x_continuous(sec.axis=sec_axis(trans=(~./1609),
